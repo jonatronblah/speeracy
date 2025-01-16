@@ -9,12 +9,25 @@ authors = [
 requires-python = ">=3.12"
 dependencies = []
 
+[project.optional-dependencies]
+cli = [
+    "speeracy-cli",
+]
+server = [
+    "speeracy-server",
+]
+
+[tool.uv.sources]
+speeracy-core = { workspace = true }
+speeracy-cli = { workspace = true }
+speeracy-server = { workspace = true }
+
+[tool.uv.workspace]
+members = ["libs/*"]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
-[tool.setuptools.packages.find]
-where = ["src"]
 
 [dependency-groups]
 dev = [

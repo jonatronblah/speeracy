@@ -1,0 +1,21 @@
+[project]
+name = "speeracy-cli"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jonathan Scheer", email = "jonatron@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "speeracy-core",
+    "typer>=0.15.1",
+    "rich>=13.9.4"
+]
+
+[project.scripts]
+speeracy = "speeracy_cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
