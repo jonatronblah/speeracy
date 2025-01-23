@@ -7,7 +7,9 @@ authors = [
     { name = "Jonathan Scheer", email = "jonatron@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "orjson>=3.10.15",
+]
 
 [project.optional-dependencies]
 cli = [
@@ -34,6 +36,7 @@ dev = [
     "black>=24.10.0",
     "ipykernel>=6.29.5",
     "notebook>=7.3.2",
+    "pytesseract>=0.3.13",
     "pytest>=8.3.4",
     "ruff>=0.9.2",
 ]
